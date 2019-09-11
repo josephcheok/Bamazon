@@ -108,9 +108,9 @@ function addItem(itemID, newQuantity) {
     function(err, res) {
       if (err) throw err;
       console.log(res.affectedRows + " products updated!");
+      startInquirer();
     }
   );
-  startInquirer();
 }
 
 function addProduct() {
@@ -150,8 +150,8 @@ function addProduct() {
         function(err, res) {
           if (err) throw err;
           console.log(res.affectedRows + " product inserted!");
+          startInquirer();
         }
       );
-      startInquirer();
     });
 }

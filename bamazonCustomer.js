@@ -56,7 +56,7 @@ function displayItems() {
       [{ stock_quantity: newQuantity }, { item_id: itemID }],
       function(err, res) {
         if (err) throw err;
-        console.log(res.affectedRows + " products updated!");
+        console.log(res.affectedRows + " product(s) updated!");
         console.log("Order confirmed! ");
       }
     );
@@ -76,10 +76,10 @@ function displayItems() {
       [{ product_sales: productSales }, { item_id: itemID }],
       function(err, res) {
         if (err) throw err;
-        console.log(res.affectedRows + " sales recorded!");
+        console.log(res.affectedRows + " sale(s) recorded!");
+        nextAction2();
       }
     );
-    nextAction2();
   }
 
   function nextAction(itemID) {
