@@ -13,3 +13,17 @@ VALUES
     ("Air Conditioner", "White Goods", 828.00, 2),
     ("Printer", "Electronics", 197.00, 6),
     ("UHD TV", "Electronics", 1395.00, 5)
+
+/* starting data for sales */
+
+UPDATE products SET product_sales=2592.00 WHERE item_id=1;
+UPDATE products SET product_sales=1368.00 WHERE item_id=3;
+UPDATE products SET product_sales=4690.00 WHERE item_id=4;
+UPDATE products SET product_sales=7672.00 WHERE item_id=5;
+UPDATE products SET product_sales=220.00 WHERE item_id=6;
+UPDATE products SET product_sales=360.00 WHERE item_id=7;
+UPDATE products SET product_sales=828.00 WHERE item_id=8;
+UPDATE products SET product_sales=394.00 WHERE item_id=9;
+UPDATE products SET product_sales=1275.00 WHERE item_id=11;
+UPDATE products SET product_sales=3225.00 WHERE item_id=12;
+

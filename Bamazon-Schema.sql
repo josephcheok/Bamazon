@@ -12,8 +12,11 @@ CREATE TABLE products (
 );
 
 CREATE TABLE departments (
-  department_id INT PRIMARY KEY NOT NULL,
+  department_id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
   department_name VARCHAR(50) NOT NULL,
   over_head_costs DECIMAL(10,2)  
 );
 
+ALTER TABLE departments AUTO_INCREMENT = 01;
+
+ALTER TABLE products ADD COLUMN product_sales DECIMAL(10,2);

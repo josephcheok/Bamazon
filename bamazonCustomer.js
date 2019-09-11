@@ -60,12 +60,26 @@ function displayItems() {
         console.log("Order confirmed! ");
       }
     );
-    query = "SELECT price FROM products WHERE ?";
+    query = "SELECT price, product_sales FROM products WHERE ?";
     connection.query(query, { item_id: itemID }, function(err, res) {
-      var sales = orderQuantity * res[0].price;
-      console.log("Cost of your purchase is: " + sales);
-      nextAction2();
+      var sale = orderQuantity * res[0].price;
+      var productSales = sale + res[0].product_sales;
+      console.log("Cost of your purchase is: " + sale);
+      updateSales(itemID, productSales);
     });
+  }
+
+  function updateSales(itemID, productSales) {
+    update = "UPDATE products SET ? WHERE ?";
+    connection.query(
+      update,
+      [{ product_sales: productSales }, { item_id: itemID }],
+      function(err, res) {
+        if (err) throw err;
+        console.log(res.affectedRows + " sales recorded!");
+      }
+    );
+    nextAction2();
   }
 
   function nextAction(itemID) {
