@@ -18,7 +18,7 @@ Bamazon is a :
 
 ## Instructions
 
-There are three modules involved in the construction of Bamazon. And they are the Customer, Manager and Supervisor modules. In order to display the full functionality of the modules, a database of 10 retail items have already been created in the mySQL database which contains the following data:
+There are three modules involved in the construction of Bamazon. They are the Customer, Manager and Supervisor modules. In order to display the full functionality of the modules, a database of 10 retail items have already been created in the mySQL database which contains the following data:
 
 1. item_id
 2. product_name
@@ -41,25 +41,25 @@ This is followed by two prompts for the user:
 - The first should ask them the ID of the product they would like to buy.
 - The second message should ask how many units of the product they would like to buy.
 
-The answers would be used to locate the item_id from the bamazon database in mysql and check if there is enough quantity to fulfill the order.
+The answers would be used to locate the item_id from the bamazon database in mySQL and check if there is enough quantity to fulfill the order.
 
-- If sufficient, order will go through
-  User would be notified of the price of the purchase and in mysql:
+- If sufficient, order will go through.
+  User would be notified of the price of the purchase and in mySQL:
 
   - the inventory of the corresponding item will be reduced and
   - the sale will be recorded.
 
   <img src="gif/saleSuccess.gif">
-   *Example 1: 2 fridges are ordered. Stock quantity is 4. Order goes through.*
+   Example 1: 2 fridges are ordered. Stock quantity is 4. Order goes through.
 
-- If insufficient, user would be notified
+- If insufficient, user would be notified.
   User is then given a chance to adjust their quantity for the same item or offered to return to the main menu.
 
   <img src="gif/saleFail.gif">
-  *Example 2: 3 fridges are ordered. Stock remaining is 2. Order fails. User adjusts quantity to 1. Order goes through.*
+  Example 2: 3 fridges are ordered. Stock remaining is 2. Order fails. User adjusts quantity to 1. Order goes through.
 
   <img src="gif/saleRecorded.gif">
-  *sale of 3 fridges ordered from Example 1 and 2 are recorded in mySQL.*
+  sale of 3 fridges ordered from Example 1 and 2 are recorded in mySQL.
 
 ### 2. Managers:
 
