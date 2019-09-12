@@ -49,6 +49,8 @@ The answers would be used to locate the item_id from the bamazon database in myS
   - the inventory of the corresponding item will be reduced and
   - the sale will be recorded.
 
+-
+
   <img src="gif/saleSuccess.gif">
    Example 1: 2 fridges are ordered. Stock quantity is 4. Order goes through.
 
@@ -59,7 +61,7 @@ The answers would be used to locate the item_id from the bamazon database in myS
   Example 2: 3 fridges are ordered. Stock remaining is 2. Order fails. User adjusts quantity to 1. Order goes through.
 
   <img src="gif/saleRecorded.gif">
-  sale of 3 fridges ordered from Example 1 and 2 are recorded in mySQL.
+  Sale of 3 fridges ordered from Example 1 and 2 are recorded in mySQL.
 
 ### 2. Managers:
 
@@ -76,16 +78,16 @@ If a manager selects `View Products for Sale`, the app should list every availab
 
    <img src="gif/viewProducts.gif">
 
-If a manager selects `View Low Inventory`, then it should list all items with an inventory count lower than five.
+If a manager selects `View Low Inventory`, then it should list all items with an inventory count lower than 5.
 
    <img src="gif/viewLow.gif">
 
-If a manager selects `Add to Inventory`, your app should display a prompt that will let the manager "add more" of any item currently in the store.
+If a manager selects `Add to Inventory`, the app displays a prompt that will let the manager "add more" of any item currently in the store.
 
   <img src="gif/addInventory.gif">
     *Example 3: 5 fridges are added to remaining 1. Full item and low inventory list reflect change.*
 
-If a manager selects `Add New Product`, it should allow the manager to add a completely new product to the store.
+If a manager selects `Add New Product`, it allows the manager to add a completely new product to the store.
 
   <img src="gif/addProduct.gif">
 
